@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>News Aggregator</title>
+    <title>Home - NEXUS</title>
+    <link rel="shortcut icon" type="image/png" href="/src/icons/logo.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="/src/css/style.css">
 </head>
 <body>
     
     <nav>
         <div class="black nav-wrapper">
-          <a href="index.html" class="brand-logo center">
-            <i class="material-icons" style="font-size:3rem;">web</i>
-          </a>
+            <a href="#" class="brand-logo center">
+                <i class="material-icons" style="font-size:3rem;">web</i>
+            </a>
+            
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger pulse">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html" class="waves-effect waves-light ">Home</a></li>                
+                <li><a href="about.html" class="waves-effect waves-light ">About</a></li>
+            </ul> 
         </div>
     </nav>
-
+      
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html"><i class="material-icons">home</i>Home</a></li>                
+        <li><a href="about.html"><i class="material-icons">help</i>About</a></li>
+    </ul>
+    
     
     <div class="container">
     
         <div class="row">
             <div class="col s12 m6">
-                <div class="card black small z-depth-5">
-                    <!-- <div class="card-image">
+                <div class="card black small z-depth-4">
+                    <div class="card-image">
                         <img src="/src/images/toi.png">
-                    </div> -->
+                    </div>
                     <div class="card-action center">
                         <a data-fancybox data-type="iframe" data-src="https://timesofindia.indiatimes.com/" href="javascript:;" class="collection-item">Times of India</a>
                     </div>
@@ -37,10 +53,10 @@
             </div>
             
             <div class="col s12 m6">
-                <div class="card black small z-depth-5">
-                    <!-- <div class="card-image">
-                        <img src="/src/images/ie.jpg">
-                    </div> -->
+                <div class="card black small z-depth-4">
+                    <div class="card-image">
+                        <img src="/src/images/ie.png">
+                    </div>
                     <div class="card-action center">
                         <a data-fancybox data-type="iframe" data-src="http://indianexpress.com/" href="javascript:;" class="collection-item">The Indian Express</a>        
                     </div>
@@ -48,9 +64,9 @@
             </div>
 
             <div class="col s12 m6">
-                    <div class="card black small z-depth-5">
-                        <div class="card-content white-text">
-                            <span class="card-title center">BBC News</span>
+                    <div class="card black small z-depth-4">
+                        <div class="card-image">
+                            <img src="/src/images/bbc.png">
                         </div>
                         <div class="card-action center">
                             <a data-fancybox data-type="iframe" data-src="http://www.bbc.com/" href="javascript:;" class="collection-item">BBC</a>                               
@@ -59,9 +75,9 @@
             </div>
 
             <div class="col s12 m6">
-                    <div class="card black small z-depth-5">
-                        <div class="card-content white-text">
-                            <span class="card-title center">CNBC</span>
+                    <div class="card black small z-depth-4">
+                        <div class="card-image">
+                            <img src="/src/images/cnbc.png">
                         </div>
                         <div class="card-action center">
                             <a data-fancybox data-type="iframe" data-src="https://www.cnbc.com/world/?region=world" href="javascript:;" class="collection-item">CNBC</a>
@@ -70,20 +86,20 @@
             </div>
 
             <div class="col s12 m6">
-                        <div class="card black small z-depth-5">
-                            <div class="card-content white-text">
-                                <span class="card-title center">NDTV</span>
+                        <div class="card black small z-depth-4">
+                            <div class="card-image">
+                                <img src="/src/images/ndtv.jpg">
                             </div>
-                            <div class="card-action center">
-                                <a data-fancybox data-type="iframe" data-src="https://www.ndtv.com/" href="javascript:;" class="collection-item">NDTV</a>
+                            <div class="card-action black center">
+                                <a data-fancybox data-type="iframe" data-src="https://www.ndtv.com/" href="javascript:;" class="collection-item ">NDTV</a>
                             </div>
                         </div>
             </div>
 
             <div class="col s12 m6">
-                    <div class="card black small z-depth-5">
-                        <div class="card-content white-text">
-                            <span class="card-title center">India Today</span>
+                    <div class="card black small z-depth-4">
+                        <div class="card-image">
+                            <img src="/src/images/it.png">
                         </div>
                         <div class="card-action center">
                             <a data-fancybox data-type="iframe" data-src="https://www.indiatoday.in/" href="javascript:;" class="collection-item">India Today</a>       
@@ -96,13 +112,29 @@
     </div>
 
 
+    <footer class="page-footer black">
+        <div class="footer-copyright">
+            <div class="container center">
+                <h6>© NEXUS CORP 2018</h6>
+            </div>
+        </div>
+    </footer>
 
 
-
+    
 
     <script src="src/js/app.js"></script>
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+    </script>
+        
 </body>
 </html>
